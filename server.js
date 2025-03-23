@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 // PostgreSQL setup
 const pool = new Pool({
     user: 'postgres',
-  host: 'db.rrunfqoudjakydurwguc.supabase.co',
+  host: 'rrunfqoudjakydurwguc.supabase.co',
   database: 'postgres',
   password: process.env.DB_PASSWORD,
   port: 5432,  // Default port for PostgreSQL
