@@ -7,7 +7,7 @@ const pool = new Pool({
   host: 'rrunfqoudjakydurwguc.supabase.co',
   database: 'postgres',
   password: process.env.DB_PASSWORD,
-  port: 5432
+  port: 5432,
 });
 
 module.exports = async (req, res) => {
