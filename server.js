@@ -15,7 +15,7 @@ const pool = new Pool({
   host: 'rrunfqoudjakydurwguc.supabase.co',
   database: 'postgres',
   password: process.env.DB_PASSWORD,
-  port: 5432,  // Default port for PostgreSQL
+  port: 5432  // Default port for PostgreSQL
 });
 
 // Example API endpoint to get scores
