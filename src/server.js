@@ -19,7 +19,7 @@ const pool = new Pool({
 });
 
 // Example API endpoint to get scores
-app.get('/scores', async (req, res) => {
+app.get('api/scores', async (req, res) => {
   try {
     const result = await pool.query('SELECT * FROM scores');
     res.json(result.rows);
