@@ -9,24 +9,27 @@ const pool = new Pool({
   password: 'DontKillNike21!',
   port: 5432,
 });
+
 module.exports = async (req, res) => {
   try {
-    // Attempting to check the database connection
-    const client = await pool.connect();
-    console.log('Database connection successful!');
+    // Log connection attempt
+    console.log("Attempting to connect to database...");
 
-    // Perform your query
-    const result = await pool.query('SELECT * FROM scores LIMIT 10');
-    console.log('Query result:', result.rows);  // Log the query result
-    
-    client.release();  // Release the client back to the pool
-    
-    res.status(200).json(result.rows);
+    // Try making a test query to check the connection
+    const result = await pool.query('SELECT NOW()');  // Simple query to test connection
+    console.log("Database connected:", result.rows);
+
+    // If the connection is successful, run the actual query
+    const queryResult = await pool.query('SELECT * FROM scores LIMIT 10');
+    res.status(200).json(queryResult.rows);
+
   } catch (err) {
-    console.error('Error:', err);  // Log the full error to understand it
+    // Log detailed error message
+    console.error("Error occurred:", err);
     res.status(500).json({ error: 'Internal Server Error' });
   }
 };
+
 
 module.exports = async (req, res) => {
   try {
