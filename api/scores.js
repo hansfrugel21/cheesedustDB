@@ -12,7 +12,7 @@ const pool = new Pool({
 
 module.exports = async (req, res) => {
   try {
-    const result = await pool.query('SELECT * FROM scores');
+    const result = await pool.query('SELECT * FROM scores' LIMIT 10);
     res.status(200).json(result.rows);
   } catch (err) {
     console.error('Error:', err);
