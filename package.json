@@ -1,24 +1,19 @@
 {
   "name": "cheesedust-db",
   "version": "1.0.0",
-  "description": "API for Cheesedust DB",
+  "description": "March Madness App with PostgreSQL",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js",
-    "build": "vercel build"
+    "dev": "vercel dev",
+    "start": "vercel dev"
   },
   "dependencies": {
     "express": "^4.17.1",
     "pg": "^8.7.1",
-    "body-parser": "^1.19.0"
+    "body-parser": "^1.19.0",
+    "@vercel/node": "^2.0.0"
   },
   "engines": {
     "node": "18.x"
-  },
-  "author": "Your Name",
-  "license": "ISC",
-  "devDependencies": {
-    "@vercel/node": "^1.12.1"
   }
 }
