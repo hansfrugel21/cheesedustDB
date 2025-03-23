@@ -14,7 +14,7 @@ const pool = new Pool({
     user: 'postgres',
   host: 'rrunfqoudjakydurwguc.supabase.co',
   database: 'postgres',
-  password: 'DontKillNike21!',
+  password: process.env.DB_PASSWORD,
   port: 5432,  // Default port for PostgreSQL
 });
 
