@@ -11,11 +11,11 @@ app.use(bodyParser.json());
 
 // PostgreSQL setup
 const pool = new Pool({
-    user: 'postgres',
-  host: 'rrunfqoudjakydurwguc.supabase.co',
-  database: 'postgres',
-  password: process.env.DB_PASSWORD,
-  port: 5432,  // Default port for PostgreSQL
+  user: process.env.DB_USER, // Reference the secret for DB username
+  host: process.env.DB_HOST, // Reference the secret for DB host
+  database: process.env.DB_NAME, // Reference the secret for DB name
+  password: process.env.DB_PASSWORD, // Reference the secret for DB password
+  port: 5432, // Default port for PostgreSQL
 });
 
 // Example API endpoint to get scores
