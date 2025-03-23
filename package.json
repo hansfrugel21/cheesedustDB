@@ -1,5 +1,5 @@
 {
-  "name": "cheesdustDB",
+  "name": "cheesdust-db",
   "version": "1.0.0",
   "description": "API backend for the March Madness application",
   "main": "server.js",
