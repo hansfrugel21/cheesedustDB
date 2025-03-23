@@ -1,15 +1,20 @@
 {
   "version": 2,
+  "functions": {
+    "api/**/*.js": {
+      "timeout": 30
+    }
+  },
   "builds": [
     {
-      "src": "server.js",
+      "src": "api/**/*.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/api/scores",
-      "dest": "/server.js"
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
     }
   ]
 }
