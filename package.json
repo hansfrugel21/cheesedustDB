@@ -1,17 +1,24 @@
 {
-  "name": "cheesdust-db",
+  "name": "cheesedust-db",
   "version": "1.0.0",
-  "description": "API backend for the March Madness application",
+  "description": "API for Cheesedust DB",
   "main": "server.js",
   "scripts": {
-  "start": "node server.js"
-}
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "vercel build"
+  },
   "dependencies": {
     "express": "^4.17.1",
     "pg": "^8.7.1",
     "body-parser": "^1.19.0"
   },
-  "author": "",
-  "license": "ISC"
+  "engines": {
+    "node": "16.x"
+  },
+  "author": "Your Name",
+  "license": "ISC",
+  "devDependencies": {
+    "@vercel/node": "^1.12.1"
+  }
 }
-
