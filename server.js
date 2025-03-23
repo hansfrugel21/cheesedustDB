@@ -10,10 +10,10 @@ app.use(bodyParser.json());
 
 // PostgreSQL setup
 const pool = new Pool({
-  user: 'your-db-username',
-  host: 'your-db-host',
-  database: 'your-db-name',
-  password: 'your-db-password',
+  user: 'postgres',
+  host: 'https://rrunfqoudjakydurwguc.supabase.co',
+  database: 'postgress',
+  password: 'DustofCheese21!',
   port: 5432,
 });
 
